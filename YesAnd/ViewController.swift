@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GameCenterUtility().authenticateLocalPlayer(self)
+        if (!GameCenterUtility().localPlayer().authenticated) {
+            GameCenterUtility().authenticateLocalPlayer(self)
+        }
     }
     
 }

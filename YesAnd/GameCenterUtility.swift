@@ -11,6 +11,10 @@ import GameKit
 
 class GameCenterUtility {
     
+    func localPlayer() -> GKLocalPlayer {
+        return GKLocalPlayer.localPlayer()
+    }
+    
     func authenticateLocalPlayer(viewController: UIViewController) {
         let localPlayer = GKLocalPlayer.localPlayer()
         localPlayer.authenticateHandler = {(gameCenterViewController: UIViewController?, error: NSError?) -> Void in
