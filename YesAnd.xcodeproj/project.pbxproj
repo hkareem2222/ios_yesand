@@ -14,6 +14,8 @@
 		8549D9281D43DE1700525360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8549D9261D43DE1700525360 /* LaunchScreen.storyboard */; };
 		8549D9331D43DE1700525360 /* YesAndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549D9321D43DE1700525360 /* YesAndTests.swift */; };
 		8549D93E1D43DE1700525360 /* YesAndUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549D93D1D43DE1700525360 /* YesAndUITests.swift */; };
+		8549D94C1D43E1B200525360 /* GameCenterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549D94B1D43E1B200525360 /* GameCenterUtility.swift */; };
+		8549D94E1D43EC0500525360 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8549D94D1D43EC0500525360 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8549D9391D43DE1700525360 /* YesAndUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YesAndUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8549D93D1D43DE1700525360 /* YesAndUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesAndUITests.swift; sourceTree = "<group>"; };
 		8549D93F1D43DE1700525360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8549D94B1D43E1B200525360 /* GameCenterUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterUtility.swift; sourceTree = "<group>"; };
+		8549D94D1D43EC0500525360 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8549D94E1D43EC0500525360 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		8549D9111D43DE1700525360 = {
 			isa = PBXGroup;
 			children = (
+				8549D94D1D43EC0500525360 /* GameKit.framework */,
 				8549D91C1D43DE1700525360 /* YesAnd */,
 				8549D9311D43DE1700525360 /* YesAndTests */,
 				8549D93C1D43DE1700525360 /* YesAndUITests */,
@@ -99,6 +105,7 @@
 			children = (
 				8549D91D1D43DE1700525360 /* AppDelegate.swift */,
 				8549D91F1D43DE1700525360 /* ViewController.swift */,
+				8549D94B1D43E1B200525360 /* GameCenterUtility.swift */,
 				8549D9211D43DE1700525360 /* Main.storyboard */,
 				8549D9241D43DE1700525360 /* Assets.xcassets */,
 				8549D9261D43DE1700525360 /* LaunchScreen.storyboard */,
@@ -193,6 +200,7 @@
 				TargetAttributes = {
 					8549D9191D43DE1700525360 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LMF22H2337;
 					};
 					8549D92D1D43DE1700525360 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -258,6 +266,7 @@
 			files = (
 				8549D9201D43DE1700525360 /* ViewController.swift in Sources */,
 				8549D91E1D43DE1700525360 /* AppDelegate.swift in Sources */,
+				8549D94C1D43E1B200525360 /* GameCenterUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
