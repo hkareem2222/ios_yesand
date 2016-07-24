@@ -40,7 +40,7 @@ class ConversationViewController: UIViewController, UITextViewDelegate {
         }
         UIView.animateWithDuration(self.animationDurationFromKeyboardNotification(notification),
                                    delay: 0, options: self.animationCurveFromKeyboardNotification(notification),
-                                   animations: { [weak self] in
+                              animations: { [weak self] in
                                     self?.bottomConstraint.constant = keyboardFrame.height
         }, completion: nil)
     }
