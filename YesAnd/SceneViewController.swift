@@ -10,8 +10,16 @@ import UIKit
 
 class SceneViewController: UIViewController {
 
+    @IBOutlet weak var conversationButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Scene"
+    }
+
+    @IBAction func buttonPressed(sender: AnyObject) {
+        let vc = UIStoryboard.chatStoryboard().instantiateInitialViewController()!
+        navigationController?.presentViewController(vc, animated: true, completion: nil)
     }
 
 }

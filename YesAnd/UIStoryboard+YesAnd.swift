@@ -22,4 +22,8 @@ extension UIStoryboard {
         return UIStoryboard(name: "Profile", bundle: nil)
     }
 
+    class func chatStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: "Chat", bundle: nil)
+    }
+
 }

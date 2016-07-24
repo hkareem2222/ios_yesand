@@ -16,9 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="AoD-6d-bHN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urn-DR-82Y">
+                                <rect key="frame" x="514" y="520" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="lXc-Nh-hp1" eventType="touchUpInside" id="NiD-wX-aUl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="df9-Jp-dMA" firstAttribute="top" secondItem="urn-DR-82Y" secondAttribute="bottom" constant="50" id="YRb-sA-cwa"/>
+                            <constraint firstAttribute="trailing" secondItem="urn-DR-82Y" secondAttribute="trailing" constant="40" id="eVY-Yf-PRI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HDf-nr-Zq7"/>
+                    <connections>
+                        <outlet property="conversationButton" destination="urn-DR-82Y" id="NIK-dA-6vC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLi-2d-S2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
