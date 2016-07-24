@@ -12,7 +12,6 @@ class SceneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
 }

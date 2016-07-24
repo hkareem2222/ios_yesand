@@ -10,6 +10,10 @@ import UIKit
 
 class ConversationViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var sendButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

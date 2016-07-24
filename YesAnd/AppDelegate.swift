@@ -8,14 +8,23 @@
 
 import UIKit
 
+let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var router: Router = Router()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        showTabBarController()
         return true
     }
 
+    func showTabBarController() {
+        window = router.configureTabBarController()
+        router.setTabBarControllers()
+        window?.tintColor = .redColor()
+    }
 }
 
