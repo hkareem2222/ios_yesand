@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController, UITextViewDelegate {
+final class ConversationViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var textView: UITextView!
+    @IBOutlet weak private var sendButton: UIButton!
+    @IBOutlet weak private var bottomConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +26,7 @@ class ConversationViewController: UIViewController, UITextViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    func keyboardWillShow(notification: NSNotification) {
+    @objc private func keyboardWillShow(notification: NSNotification) {
         guard let keyboardFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue else {
             return
         }
@@ -45,7 +37,7 @@ class ConversationViewController: UIViewController, UITextViewDelegate {
         }, completion: nil)
     }
 
-    func keyboardWillHide(notification: NSNotification) {
+    @objc private func keyboardWillHide(notification: NSNotification) {
         UIView.animateWithDuration(self.animationDurationFromKeyboardNotification(notification),
                                    delay: 0, options: self.animationCurveFromKeyboardNotification(notification),
                               animations: { [weak self] in
@@ -62,20 +54,12 @@ class ConversationViewController: UIViewController, UITextViewDelegate {
         return UIViewAnimationOptions(rawValue: curveValue << 16)
     }
 
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-
-    @IBAction func closeVC(sender: AnyObject) {
+    @IBAction private func closeVC(sender: AnyObject) {
         textView.resignFirstResponder()
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBAction func sendPressed(sender: AnyObject) {
+    @IBAction private func sendPressed(sender: AnyObject) {
 
     }
 
@@ -83,4 +67,24 @@ class ConversationViewController: UIViewController, UITextViewDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
+}
+
+extension ConversationViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+}
+
+extension ConversationViewController: UITextViewDelegate {
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }

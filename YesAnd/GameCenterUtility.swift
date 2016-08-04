@@ -9,7 +9,7 @@
 import UIKit
 import GameKit
 
-class GameCenterUtility {
+final class GameCenterUtility {
     
     func localPlayer() -> GKLocalPlayer {
         return GKLocalPlayer.localPlayer()

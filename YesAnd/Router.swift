@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Router {
+final class Router {
 
     enum VCType: Int {
         case Main, Scene, Profile
