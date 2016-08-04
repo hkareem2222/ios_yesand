@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1dX-sa-eZ7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Scene View Controller-->
+        <scene sceneID="Sqs-WD-JRc">
+            <objects>
+                <viewController id="lXc-Nh-hp1" customClass="SceneViewController" customModule="YesAnd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jd0-Ik-IuT"/>
+                        <viewControllerLayoutGuide type="bottom" id="df9-Jp-dMA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AoD-6d-bHN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urn-DR-82Y">
+                                <rect key="frame" x="514" y="520" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="lXc-Nh-hp1" eventType="touchUpInside" id="NiD-wX-aUl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="df9-Jp-dMA" firstAttribute="top" secondItem="urn-DR-82Y" secondAttribute="bottom" constant="50" id="YRb-sA-cwa"/>
+                            <constraint firstAttribute="trailing" secondItem="urn-DR-82Y" secondAttribute="trailing" constant="40" id="eVY-Yf-PRI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HDf-nr-Zq7"/>
+                    <connections>
+                        <outlet property="conversationButton" destination="urn-DR-82Y" id="NIK-dA-6vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLi-2d-S2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="atd-k9-K6c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dX-sa-eZ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Vq-xl-QGb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lXc-Nh-hp1" kind="relationship" relationship="rootViewController" id="Xh0-Qk-aYU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zs-uE-hf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="252"/>
+        </scene>
+    </scenes>
+</document>
