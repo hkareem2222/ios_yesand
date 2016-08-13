@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAnalytics
+import FirebaseCrash
 
 final class ViewController: UIViewController {
 
@@ -18,6 +19,7 @@ final class ViewController: UIViewController {
             GameCenterUtility().authenticateLocalPlayer(self)
         }
         FIRAnalytics.logEventWithName("main_vc", parameters: nil)
+        FIRCrashMessage("Cause Crash button clicked")
     }
 
 }

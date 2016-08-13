@@ -20,6 +20,7 @@ final class ProfileViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         FIRAnalytics.logEventWithName("profile_vc", parameters: nil)
+        fatalError()
     }
 
 }
