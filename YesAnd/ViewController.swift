@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 final class ViewController: UIViewController {
 
@@ -16,7 +17,8 @@ final class ViewController: UIViewController {
         if (!GameCenterUtility().localPlayer().authenticated) {
             GameCenterUtility().authenticateLocalPlayer(self)
         }
+        FIRAnalytics.logEventWithName("main_vc", parameters: nil)
     }
-    
+
 }
 

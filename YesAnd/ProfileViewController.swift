@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
+        FIRAnalytics.logEventWithName("profile_vc", parameters: nil)
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        FIRAnalytics.logEventWithName("profile_vc", parameters: nil)
     }
 
 }
