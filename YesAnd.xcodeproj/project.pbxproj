@@ -16,6 +16,7 @@
 		8549D93E1D43DE1700525360 /* YesAndUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549D93D1D43DE1700525360 /* YesAndUITests.swift */; };
 		8549D94C1D43E1B200525360 /* GameCenterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549D94B1D43E1B200525360 /* GameCenterUtility.swift */; };
 		8549D94E1D43EC0500525360 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8549D94D1D43EC0500525360 /* GameKit.framework */; };
+		F9923A1E1D5EC16A009D64A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9923A1D1D5EC16A009D64A5 /* GoogleService-Info.plist */; };
 		F99A232F1D45268E0070FF24 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99A232E1D45268E0070FF24 /* Chat.storyboard */; };
 		F99A23341D4527C00070FF24 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A23331D4527C00070FF24 /* ConversationViewController.swift */; };
 		F99A23381D452ACE0070FF24 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99A23371D452ACE0070FF24 /* Scene.storyboard */; };
@@ -59,6 +60,7 @@
 		8549D93F1D43DE1700525360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8549D94B1D43E1B200525360 /* GameCenterUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterUtility.swift; sourceTree = "<group>"; };
 		8549D94D1D43EC0500525360 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		F9923A1D1D5EC16A009D64A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F99A232E1D45268E0070FF24 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		F99A23331D4527C00070FF24 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		F99A23371D452ACE0070FF24 /* Scene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scene.storyboard; sourceTree = "<group>"; };
@@ -125,8 +127,7 @@
 				F99A23411D452E320070FF24 /* Models */,
 				F99A23321D4527990070FF24 /* Utilities */,
 				8549D9241D43DE1700525360 /* Assets.xcassets */,
-				8549D9261D43DE1700525360 /* LaunchScreen.storyboard */,
-				8549D9291D43DE1700525360 /* Info.plist */,
+				F9923A1C1D5EC150009D64A5 /* Supporting Files */,
 			);
 			path = YesAnd;
 			sourceTree = "<group>";
@@ -147,6 +148,16 @@
 				8549D93F1D43DE1700525360 /* Info.plist */,
 			);
 			path = YesAndUITests;
+			sourceTree = "<group>";
+		};
+		F9923A1C1D5EC150009D64A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8549D9261D43DE1700525360 /* LaunchScreen.storyboard */,
+				8549D9291D43DE1700525360 /* Info.plist */,
+				F9923A1D1D5EC16A009D64A5 /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F99A23301D4527590070FF24 /* Storyboards */ = {
@@ -339,6 +350,7 @@
 				8549D9251D43DE1700525360 /* Assets.xcassets in Resources */,
 				8549D9231D43DE1700525360 /* Main.storyboard in Resources */,
 				F99A23381D452ACE0070FF24 /* Scene.storyboard in Resources */,
+				F9923A1E1D5EC16A009D64A5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
